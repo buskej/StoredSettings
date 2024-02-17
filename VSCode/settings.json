@@ -1,0 +1,44 @@
+///////////////////// VSCODE SETTINGS JSON /////////////////////
+{
+    ////// Can change ///////
+        "window.zoomLevel": 2,  //general zoom of program
+        "workbench.startupEditor": "none",  //don't freaking know
+    
+    ////// Don't touch(know I like) ///////
+        "editor.tabCompletion": "on", //tab accepts sugestions
+        "editor.acceptSuggestionOnEnter": "off", //enter does not accept and acts like enter
+        "python.createEnvironment.contentButton": "hide", //(python extension)
+        "python.experiments.enabled": false, //this is opt out of diagnostics
+        "python.experiments.optOutFrom": ["All"], //this is opt out of diagnostics
+        "security.workspace.trust.untrustedFiles": "open", //avoid 'trust workspace' text
+        "security.workspace.trust.enabled": false, // removes the need to trust
+        // "workbench.activityBar.location": "hidden", //left unused bar
+        "editor.renderWhitespace": "all", //dots that indicate amount of space
+        "editor.minimap.enabled": false, //remove minimap
+        "editor.scrollbar.horizontal": "hidden", //scrollbar horizontal remove
+    
+    ////// remove tabs /////
+        "workbench.editor.showTabs": "none",
+        "workbench.editor.limit.enabled": true,
+        "workbench.editor.limit.perEditorGroup": true,
+        "workbench.editor.limit.value": 10,
+        "files.autoSave": "onWindowChange",
+    
+    ////// Python //////
+        "python.condaPath": "/home/buske/miniconda3", //miniconda folder path
+        "python.defaultInterpreterPath": "/home/buske/miniconda3/envs/py3115/bin/python", //deufalt conda env path
+        "python.analysis.completeFunctionParens": true, //get () on tab sugestions py
+        "python.analysis.autoImportCompletions": true,
+    
+    
+    ////// Terminal //////
+        //think this is my semi successful try of getting my og terminal in linux
+        "terminal.external.linuxExec": "terminator",
+        "terminal.integrated.automationProfile.linux": {},
+        "terminal.explorerKind": "external",
+        "terminal.integrated.inheritEnv": false,
+    
+    //////// Not sorted ///////
+    
+    
+    }
