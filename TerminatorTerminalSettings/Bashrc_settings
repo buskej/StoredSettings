@@ -1,0 +1,56 @@
+# this is my .bashrc settings that I add
+# add "changeps1: false" to .condarc and create condarc with "conda config" in terminal
+
+# makes unity app larger if I start it with unity command in terminal
+alias unity="GDK_SCALE=2 unityhub"
+
+############## terminal PS1 look ################
+# assumes terminator terminal with colors
+#assumes changes in .condarc "changeps1: false"
+green_color='\[\033[1;32m\]'
+light_gray='\[\033[0;90m\]'
+blue_color='\[\033[1;34m\]'
+basic_white='\[\033[0;29m\]'
+resonable_graywhite='\[\033[2;37m\]'
+green_box='\[\033[7;32m\]'
+resonable_box='\[\033[7;29m\]'
+
+status_style=$light_gray
+prompt_style=$green_color
+folder_style=$resonable_graywhite
+command_style=$basic_white
+git_style=$green_box
+fill="—- "
+
+####### This PS1 is what dictates what is printed as name
+PS1="$status_style"'$fill---------\n'"$prompt_style"'${debian_chroot:+($debian_chroot)}\u:'"$folder_style"'\w '"$resonable_box"'$(parse_conda_env)'"$basic_white"' '"$git_style"'$(git_branch)\n'"$status_style"'$fill \t\n'"$command_style$"
+#PS1="$status_style"'\w $'
+
+##### (this one is invoked every time before a command is executed):
+#trap 'echo -ne "\e[0m"| echo' DEBUG    #new line after every command
+trap 'echo -ne "\e[0m"' DEBUG
+
+function prompt_command {
+    # create a $fill of all screen width minus the time string and a space:
+    let fillsize=${COLUMNS}-9
+    fill=""
+    while [ "$fillsize" -gt "0" ]
+    do
+    fill="-${fill}"
+    let fillsize=${fillsize}-1
+    done
+}
+PROMPT_COMMAND=prompt_command
+# git
+git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+# conda
+conda deactivate
+function parse_conda_env () {
+    if [ ! -z "$CONDA_DEFAULT_ENV" ]
+    then
+        echo "($(basename "$CONDA_DEFAULT_ENV"))"
+    fi
+}
+############# end terminal PS1 look ################
