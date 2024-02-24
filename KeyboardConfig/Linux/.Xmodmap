@@ -4,8 +4,8 @@ keycode 47 = semicolon colon odiaeresis Odiaeresis
 keycode 48 = apostrophe quotedbl adiaeresis Adiaeresis
 keycode 34 = bracketleft braceleft aring Aring
 
-keycode 21 = plus equal
-keycode 51 = equal backslash
+keycode 21 = plus bar plus bar
+keycode 51 = equal backslash equal backslash
 
 ! mouse
 pointer = 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
