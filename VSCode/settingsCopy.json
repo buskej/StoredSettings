@@ -1,21 +1,25 @@
 ///////////////////// VSCODE SETTINGS JSON /////////////////////
 {
     ////// Can change ///////
-        "window.zoomLevel": 2,  //general zoom of program
-        "workbench.startupEditor": "none",  //don't freaking know
+        "window.zoomLevel": 3,  //general zoom of program
+        "workbench.startupEditor": "none", //theme
     
     ////// Don't touch(know I like) ///////
-        "editor.tabCompletion": "on", //tab accepts sugestions
+        "editor.tabCompletion": "on", //tab accepts suggestions
         "editor.acceptSuggestionOnEnter": "off", //enter does not accept and acts like enter
         "python.createEnvironment.contentButton": "hide", //(python extension)
         "python.experiments.enabled": false, //this is opt out of diagnostics
         "python.experiments.optOutFrom": ["All"], //this is opt out of diagnostics
         "security.workspace.trust.untrustedFiles": "open", //avoid 'trust workspace' text
         "security.workspace.trust.enabled": false, // removes the need to trust
-        // "workbench.activityBar.location": "hidden", //left unused bar
         "editor.renderWhitespace": "all", //dots that indicate amount of space
         "editor.minimap.enabled": false, //remove minimap
         "editor.scrollbar.horizontal": "hidden", //scrollbar horizontal remove
+    
+    ////// Minimize ///////
+        "workbench.activityBar.location": "hidden", //left unused bar
+        "window.menuBarVisibility": "hidden", // press alt to se file, edit, ... toggle for alt fix
+        "workbench.statusBar.visible": false, // statusbar remove
     
     ////// remove tabs /////
         "workbench.editor.showTabs": "none",
@@ -26,10 +30,9 @@
     
     ////// Python //////
         "python.condaPath": "/home/buske/miniconda3", //miniconda folder path
-        "python.defaultInterpreterPath": "/home/buske/miniconda3/envs/py3115/bin/python", //deufalt conda env path
-        "python.analysis.completeFunctionParens": true, //get () on tab sugestions py
+        "python.defaultInterpreterPath": "/home/buske/miniconda3/envs/py3115/bin/python", //default conda env path
+        "python.analysis.completeFunctionParens": true, //get () on tab suggestions py
         "python.analysis.autoImportCompletions": true,
-    
     
     ////// Terminal //////
         //think this is my semi successful try of getting my og terminal in linux
@@ -38,7 +41,21 @@
         "terminal.explorerKind": "external",
         "terminal.integrated.inheritEnv": false,
     
-    //////// Not sorted ///////
+    ////// HTML //////
+        "liveServer.settings.donotVerifyTags": true,
     
+    //////// spelling check (extension) ///////
+    "cSpell.userWords": [
+        "glpk",
+        "gursh",
+        "oper",
+        "pyomo"
+    ],
+    
+    //////// Not sorted ///////
+        "new settings will be added under this line ": true,
+        "git.openRepositoryInParentFolders": "always",
+        "liveServer.settings.donotShowInfoMsg": true,
+        "javascript.updateImportsOnFileMove.enabled": "always",
     
     }

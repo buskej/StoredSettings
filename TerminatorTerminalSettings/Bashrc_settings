@@ -3,6 +3,8 @@
 
 # makes unity app larger if I start it with unity command in terminal
 alias unity="GDK_SCALE=2 unityhub"
+# remove notification in vs code off with simple command
+alias notificationOff="sudo echo 'monaco-workbench>.notifications-toasts.visible{display:none;}.notifications-toasts{display:none;}' >> /usr/share/code/resources/app/out/vs/workbench/workbench.desktop.main.css"
 
 ############## terminal PS1 look ################
 # assumes terminator terminal with colors
